@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProfileSynchronizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfileSynchronizer"
+        mc:Ignorable="d"
+        Title="Profile Synchronizer" Height="350" Width="525">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Registry Editor">
+                <DockPanel>
+                    <TreeView Name="trvRegistryKeys" DockPanel.Dock="Left" Width="159" SelectedItemChanged="trvRegistryKeys_SelectedItemChanged"/>
+                    <ListView Name="lvRegistryKeyValues" DockPanel.Dock="Right"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="File Synchronizer">
+                <TreeView Name="trvFiles">
+                </TreeView>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
