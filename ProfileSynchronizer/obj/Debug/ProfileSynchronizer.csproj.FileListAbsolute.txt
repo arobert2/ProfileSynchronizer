@@ -1,0 +1,17 @@
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\ProfileSynchronizer.exe.config
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\ProfileSynchronizer.exe
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\ProfileSynchronizer.pdb
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.csprojResolveAssemblyReference.cache
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\MainWindow.g.cs
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\App.g.cs
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer_MarkupCompile.cache
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer_MarkupCompile.lref
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\MainWindow.baml
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.g.resources
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.Properties.Resources.resources
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.csproj.GenerateResource.Cache
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.exe
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\obj\Debug\ProfileSynchronizer.pdb
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\RegistryTools.dll
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\RegistryTools.pdb
+C:\Users\arober49\Desktop\ProfileSynchronizer\ProfileSynchronizer\bin\Debug\RegistryTools.dll.config
