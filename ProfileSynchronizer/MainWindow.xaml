@@ -5,17 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProfileSynchronizer"
         mc:Ignorable="d"
-        Title="Profile Synchronizer" Height="350" Width="525">
+        Title="Profile Synchronizer" Height="379.634" Width="768.478">
     <Grid>
         <TabControl>
             <TabItem Header="Registry Editor">
                 <DockPanel>
-                    <TreeView Name="trvRegistryKeys" DockPanel.Dock="Left" Width="159" SelectedItemChanged="trvRegistryKeys_SelectedItemChanged"/>
-                    <ListView Name="lvRegistryKeyValues" DockPanel.Dock="Right"/>
+                    <TreeView Name="trvRegistryKeys" DockPanel.Dock="Left" Width="233" SelectedItemChanged="trvRegistryKeys_SelectedItemChanged">
+                        <TreeView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="New"/>
+                                <MenuItem Header="Rename"/>
+                                <MenuItem Header="Export"/>
+                                <Separator/>
+                                <MenuItem Header="Delete"/>
+                            </ContextMenu>
+                        </TreeView.ContextMenu>
+                    </TreeView>
+                    <ListView Name="lvRegistryKeyValues" DockPanel.Dock="Right">
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="New"/>
+                                <MenuItem Header="Edit"/>
+                                <Separator/>
+                                <MenuItem Header="Delete"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=Name}" Width="100"/>
+                                <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Path=RegType}" Width="100"/>
+                                <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Path=Value}" Width="300"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </DockPanel>
             </TabItem>
             <TabItem Header="File Synchronizer">
                 <TreeView Name="trvFiles">
+                    
                 </TreeView>
             </TabItem>
         </TabControl>

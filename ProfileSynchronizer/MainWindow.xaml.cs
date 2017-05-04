@@ -17,6 +17,7 @@ using System.Runtime.InteropServices;
 using System.Configuration;
 using System.Collections.Specialized;
 using System.Threading;
+using RegistryTools;
 
 namespace ProfileSynchronizer
 {
@@ -41,19 +42,26 @@ namespace ProfileSynchronizer
         private void trvRegistryKeys_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             TreeViewItem path = (TreeViewItem)trvRegistryKeys.SelectedItem;
+            RegValueData[] regdata = RegistryTools.GetKeyValues(path.Tag as string);
+
             if (path != null && path.Items.Count == 0)
             {
                 string[] newkeys = RegistryTools.GetChildKeys((string)path.Tag);
                 foreach (string k in newkeys)
-                    ((TreeViewItem)trvRegistryKeys.SelectedItem).Items.Add(k);
+                    ((TreeViewItem)trvRegistryKeys.SelectedItem).Items.Add(new TreeViewItem() { Header = k, Tag = (string)path.Tag + @"\"+ k });
+                path.IsExpanded = true;
             }
-        }
 
+            lvRegistryKeyValues.Items.Clear();
+            if(regdata.Length == 0 || regdata[0].Name != "")
+                lvRegistryKeyValues.Items.Add(new RegValueData() { Name="(Default)", RegType = RegistryValueKind.String.ToString(), Value = "" });
 
-
-        private void GetKeyValues(string key)
-        {
-            RegistryKey rk = Registry.LocalMachine.OpenSubKey(key);
+            foreach (RegValueData rvd in regdata)
+            {
+                if (rvd.Name == "")
+                    rvd.Name = "(Default)";
+                lvRegistryKeyValues.Items.Add(rvd);
+            }
         }
     }
 }
